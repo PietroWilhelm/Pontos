@@ -10,6 +10,6 @@ class ponto(models.Model):
     data_ponto = models.DateTimeField(default=datetime.datetime.now(), editable=False)
 
     def __str__(self):
-        #nome = self.objects.get(primary_key=self.id_usuario)
-        return self.data_ponto
+        nome = usuarios.objects.get(id_usuarios=self.id_usuario)
+        return f'{self.data_ponto}'
 
